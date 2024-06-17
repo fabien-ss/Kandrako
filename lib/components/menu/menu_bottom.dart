@@ -19,11 +19,11 @@ class BottomMenu extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(Icons.add, color: Colors.white,),
-              Icon(Icons.notification_add, color: Colors.white),
-              Icon(Icons.home, color: Colors.white),
-              Icon(Icons.menu, color: Colors.white),
-              Icon(Icons.person_2, color: Colors.white),
+              IconButton(onPressed: null, icon: Icon(Icons.add, color: Colors.white,),),
+              IconButton(onPressed: null, icon: Icon(Icons.notifications, color: Colors.white,),),
+              IconButton(onPressed: null, icon: Icon(Icons.home, color: Colors.white,),),
+              IconButton(onPressed: null, icon: Icon(Icons.menu, color: Colors.white,),),
+              IconButton(onPressed: null, icon: Icon(Icons.person_2, color: Colors.white,),)
             ],
           ),
         ),
