@@ -6,7 +6,7 @@ class BottomMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 60,
       decoration: const BoxDecoration(
         color: Color.fromARGB(255, 21, 130, 219),
         borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
@@ -19,11 +19,11 @@ class BottomMenu extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(Icons.add, color: Colors.white,),
-              Icon(Icons.notification_add, color: Colors.white),
-              Icon(Icons.home, color: Colors.white),
-              Icon(Icons.menu, color: Colors.white),
-              Icon(Icons.person_2, color: Colors.white),
+              IconButton(onPressed: null, icon: Icon(Icons.add, color: Colors.white,),),
+              IconButton(onPressed: null, icon: Icon(Icons.notifications, color: Colors.white,),),
+              IconButton(onPressed: null, icon: Icon(Icons.home, color: Colors.white,),),
+              IconButton(onPressed: null, icon: Icon(Icons.menu, color: Colors.white,),),
+              IconButton(onPressed: null, icon: Icon(Icons.person_2, color: Colors.white,),)
             ],
           ),
         ),
