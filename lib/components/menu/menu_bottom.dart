@@ -6,7 +6,7 @@ class BottomMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 60,
       decoration: const BoxDecoration(
         color: Color.fromARGB(255, 21, 130, 219),
         borderRadius: BorderRadius.vertical(top: Radius.circular(10)),

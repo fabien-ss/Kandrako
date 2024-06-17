@@ -48,11 +48,11 @@ class AnnonceCard extends StatelessWidget {
                 flex: 10,
                 child: Text(
                   "Hello how are you all  i'm very exiciting Hello how are you all  i'm very exiciting Hello how are you all  i'm very exiciting Hello how are you all  i'm very exiciting",
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: 14),
                 ),
               ),
               Expanded(
-                flex: 4,
+                flex: 7,
                 child: ListBody( 
                   children: [
                     TextIcon(),

@@ -12,7 +12,7 @@ class TextIcon extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Icon(Icons.date_range, applyTextScaling: true, size: 15, color: Colors.blue,), 
-            Text("11-11-24", style: TextStyle(color: Colors.black, fontSize: 9),)
+            Text("11-11-24", style: TextStyle(color: Colors.black, fontSize: 11),)
           ]
         )
     );
