@@ -90,6 +90,7 @@ class _AnnonceCreateState extends State<AnnonceCreate> {
             selectedColor: blueColor,
             currentStep: _currentStep + 1,
             size: 5,
+            
             padding: 5,
           ),
       ),

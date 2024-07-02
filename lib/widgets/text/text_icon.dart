@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TextIcon extends StatelessWidget{
@@ -17,5 +16,4 @@ class TextIcon extends StatelessWidget{
         )
     );
   }
-
 }
