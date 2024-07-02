@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kandrako/widgets/annonce/create/annonce_create.dart';
+import 'package:kandrako/widgets/annonce/my_annonce/annonce_utilisateur.dart';
 
 class BottomMenu extends StatelessWidget {
   const BottomMenu({Key? key}) : super(key: key);
@@ -19,10 +21,14 @@ class BottomMenu extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              TextButton(onPressed: () => Navigator.pushNamed(context, "/details"), child: const Icon(Icons.add, color: Colors.white,),),
+              TextButton(
+                onPressed: () { 
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AnnonceCreate()));
+                }, 
+                child: const Icon(Icons.add, color: Colors.white,),),
               TextButton(onPressed: () => Navigator.pushNamed(context, "/notifications") , child: const Icon(Icons.notifications, color: Colors.white,),),
               TextButton(onPressed: () => Navigator.pushNamed(context, "/"), child: const Icon(Icons.home, color: Colors.white,),),
-              TextButton(onPressed: () => Navigator.pushNamed(context, "/notifications"), child: const Icon(Icons.menu, color: Colors.white,),),
+              TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => AnnonceUtilisateur())), child: const Icon(Icons.menu, color: Colors.white,),),
               TextButton(onPressed: () => Navigator.pushNamed(context, "/notifications"), child: const Icon(Icons.person_2, color: Colors.white,),)
             ],
           ),

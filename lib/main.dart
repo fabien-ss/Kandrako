@@ -13,6 +13,7 @@ void main() {
     initialRoute: "/",
     routes: {
       "/": (context) => const AnnonceListe(),
+      "/details": (context) => const AnnonceDetails()
     },
   ));
 }

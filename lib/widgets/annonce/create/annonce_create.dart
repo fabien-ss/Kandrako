@@ -4,6 +4,7 @@ import 'package:kandrako/widgets/annonce/create/step/step_1.dart';
 import 'package:kandrako/widgets/annonce/create/step/step_2.dart';
 import 'package:kandrako/widgets/annonce/create/step/step_3.dart';
 import 'package:kandrako/widgets/annonce/create/step/step_4.dart';
+import 'package:kandrako/widgets/annonce/liste/annonce_liste.dart';
 import 'package:kandrako/widgets/appBar/top_app_bar.dart';
 import 'package:kandrako/widgets/button/button_primary.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
@@ -66,13 +67,17 @@ class _AnnonceCreateState extends State<AnnonceCreate> {
         duration: Duration(milliseconds: 500),
         curve: Curves.easeInOut,
       );
+    } else {
+      Navigator.push(context, MaterialPageRoute(builder: (builder) => AnnonceListe()));
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopAppBar(titre: "Publier une annonce", onNextStep: _previousStep).get(context),
+      appBar: TopAppBar(titre: "Publier une annonce", 
+        onNextStep: _previousStep
+      ).get(context),
       backgroundColor: blueColor,
       body: Container(
         child: PageView(

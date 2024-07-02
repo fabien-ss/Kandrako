@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kandrako/appTheme/colors.dart'; // Assuming this imports your color definitions
+import 'package:kandrako/appTheme/policy.dart';
+import 'package:kandrako/widgets/annonce/liste/annonce_details.dart';
 import '../options/annonce_option.dart'; // Import for AnnonceOption widget
 
 class AnnonceCard extends StatelessWidget {
@@ -52,7 +54,7 @@ class AnnonceCard extends StatelessWidget {
                   flex: 3,
                   child: Text(
                     'Je cherche une personne pour un projet de mécanique.',
-                    style: TextStyle(fontSize: 14, color: textColor),
+                    style: simpleTextStyle,
                   ),
                 ),
                 SizedBox(width: 16),
@@ -101,7 +103,7 @@ class AnnonceCard extends StatelessWidget {
                 Text("A discuter"),
                 TextButton(
                   onPressed: () {
-                    // Handle details button press
+                    Navigator.push(context, MaterialPageRoute(builder: (builder) => AnnonceDetails()));
                   },
                   child: Text("Détails"),
                 )

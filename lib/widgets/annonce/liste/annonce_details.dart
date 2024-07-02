@@ -121,8 +121,7 @@ class AnnonceDetails extends StatelessWidget {
                 )),
                 SizedBox(
                   height: 15,
-                ),
-                HorizontalButtonList(buttonLabels: ['Button 1', 'Button 2', 'Button 3'],)
+                )
                 ,
                 SizedBox(
                   height: 15,

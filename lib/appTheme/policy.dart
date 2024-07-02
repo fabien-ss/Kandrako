@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kandrako/appTheme/colors.dart';
 
 const h1 = 24;
 
@@ -11,4 +12,10 @@ const formTitleStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 18,
   color: Colors.black87,
+);
+
+const simpleTextStyle = TextStyle(
+  fontFamily: "Inter",
+  fontSize: 14,
+  color: textColor
 );
