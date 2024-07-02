@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kandrako/appTheme/colors.dart';
 import 'package:kandrako/widgets/annonce/card/annonce_card.dart';
 import 'package:kandrako/widgets/annonce/my_annonce/annonce_utilisateur_card.dart';
-import 'package:kandrako/widgets/form/custom_search_bar.dart';
+
 
 import '../../menu/menu_bottom.dart';
 
@@ -62,7 +62,6 @@ class _StepperExampleState extends State<StepperExample> {
       
       children: [
         SizedBox(height: 10,),
-        CustomSearchBar(),
         SizedBox(height: 20,),
         AnnonceUtilisateurCard(),
         SizedBox(height: 2,),
