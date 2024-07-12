@@ -5,6 +5,7 @@ import 'package:kandrako/widgets/annonce/my_annonce/annonce_utilisateur_details.
 class ListeCandidature extends StatelessWidget {
   const ListeCandidature({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return Container(

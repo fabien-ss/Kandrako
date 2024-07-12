@@ -6,3 +6,5 @@ const blancAttenuer = Color(0xffF8F8F8);
 const cardColor = Color(0xffF8F8F8);
 
 const textColor = Colors.black;
+
+const yellowColor = null;

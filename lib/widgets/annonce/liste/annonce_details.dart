@@ -2,24 +2,30 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:kandrako/appTheme/colors.dart';
+import 'package:kandrako/widgets/annonce/liste/annonce_liste.dart';
+import 'package:kandrako/widgets/appBar/top_app_bar.dart';
 import 'package:kandrako/widgets/button/button_customized.dart';
 import 'package:kandrako/widgets/button/button_primary.dart';
 
-class AnnonceDetails extends StatelessWidget {
+class AnnonceDetails extends StatefulWidget {
   const AnnonceDetails({super.key});
+
+  @override
+  _AnnonceDetailsState createState() => _AnnonceDetailsState();
+}
+
+class _AnnonceDetailsState extends State<AnnonceDetails> {
+
+  void next(){
+    Navigator.push(context, MaterialPageRoute(builder: (builder) => AnnonceListe()));
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: const Text("Détails de l'annonce"),
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        leading: const Icon(Icons.arrow_back),
-        primary: true,
-      ),
+      appBar: TopAppBar(titre: "Détails de l'annonce", onNextStep: next, fontColor: Colors.black, iconColor: Colors.black).get(context),
       body: Column(
         children: [
           Container(

@@ -72,7 +72,7 @@ class AnnonceCard extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
+          /*Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -87,7 +87,7 @@ class AnnonceCard extends StatelessWidget {
                 ),
               ],
             ),
-          ),
+          ),*/
           Divider(
             height: 1,
             thickness: 0.5,

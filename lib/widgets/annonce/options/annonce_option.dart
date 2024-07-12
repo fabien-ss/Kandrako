@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kandrako/widgets/annonce/signalement/annonce_signalement.dart';
 
 class AnnonceOption extends StatelessWidget {
   @override
@@ -30,7 +31,7 @@ class AnnonceOption extends StatelessWidget {
             leading: const Icon(Icons.warning),
             title: const Text('Signaler'),
             onTap: () {
-              Navigator.of(context).pop();
+              Navigator.push(context, MaterialPageRoute(builder: (builder) => AnnonceSignalement()));
             },
             iconColor: Colors.red,
             textColor: Colors.red,

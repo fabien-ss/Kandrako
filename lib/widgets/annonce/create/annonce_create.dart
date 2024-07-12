@@ -75,7 +75,8 @@ class _AnnonceCreateState extends State<AnnonceCreate> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TopAppBar(titre: "Publier une annonce", 
+      appBar: TopAppBar(
+        titre: "Publier une annonce", 
         onNextStep: _previousStep
       ).get(context),
       backgroundColor: blueColor,
@@ -95,7 +96,6 @@ class _AnnonceCreateState extends State<AnnonceCreate> {
             selectedColor: blueColor,
             currentStep: _currentStep + 1,
             size: 5,
-            
             padding: 5,
           ),
       ),

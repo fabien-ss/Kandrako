@@ -18,10 +18,11 @@ class CandidatureCarte extends StatelessWidget {
                 leading: Icon(
                     Icons.person_outline), // Using a different icon for variety
                 title: Text("Francine") ,
-                subtitle: Row(children: [
-                    Icon(Icons.star),
-                    Icon(Icons.star),
-                    Icon(Icons.star),
+                subtitle: Row(children: 
+                  [
+                    Icon(Icons.star, color: Colors.yellow[200],),
+                    Icon(Icons.star, color: Colors.yellow[200],),
+                    Icon(Icons.star, color: Colors.yellow[200],),
                     Icon(Icons.star),
                     Icon(Icons.star),],),
                 trailing: Row(
@@ -29,13 +30,13 @@ class CandidatureCarte extends StatelessWidget {
                   children: [
                     Row(children: [
                       IconButton(
-                        icon: Icon(Icons.check_box),
+                        icon: Icon(Icons.check_box, color: const Color.fromARGB(255, 134, 214, 137),),
                         onPressed: () {
                           // Handle phone button press
                         },
                       ),
                       IconButton(
-                        icon: Icon(Icons.dangerous_sharp),
+                        icon: Icon(Icons.dangerous_sharp, color: Colors.red[200]),
                         onPressed: () {
                           // Handle mail button press
                         },

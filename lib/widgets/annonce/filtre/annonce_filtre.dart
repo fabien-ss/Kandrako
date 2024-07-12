@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:kandrako/appTheme/policy.dart';
+import 'package:kandrako/widgets/annonce/liste/annonce_liste.dart';
+import 'package:kandrako/widgets/appBar/top_app_bar.dart';
 import 'package:kandrako/widgets/button/button_primary.dart';
+import 'package:kandrako/widgets/specialite/specialiteSelector.dart';
 
 class AnnonceFiltre extends StatelessWidget {
   const AnnonceFiltre({super.key});
@@ -10,21 +14,13 @@ class AnnonceFiltre extends StatelessWidget {
     RangeValues values = const RangeValues(0.1, 0.5);
     RangeLabels labels = RangeLabels(values.start.toString(), values.end.toString());
 
-
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            "Rechercher une annonce",
-            style: TextStyle(fontWeight: FontWeight.w100, color: Colors.black),
-          ),
-          backgroundColor: Colors.transparent,
-          centerTitle: true,
-          leading: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
-          primary: true,
-        ),
+        appBar: TopAppBar(
+          titre: "Rechercher une annonce",
+          onNextStep: () => { Navigator.push(context, MaterialPageRoute(builder: (builder) => AnnonceListe())) },
+          iconColor: Colors.black,
+          fontColor: Colors.black
+        ).get(context),
         backgroundColor: Colors.white,
         body: Column(
           children: [
@@ -48,35 +44,54 @@ class AnnonceFiltre extends StatelessWidget {
                       widthFactor: 0.8,
                       child: Column(
                         children: [
-                          Text(
-                            "Choisissez les spécialités",
+                          TextButton(
+                            child: Text(  "Choisissez les spécialités",
                             textAlign: TextAlign.left,
+                            style: textLabelTextFielStyle,),
+                            onPressed: () => showDialog( 
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Specialiteselector();
+                              }
+                            ),
+                          
                           ),
                           DropdownButtonFormField.new(
                             items: [],
                             onChanged: null,
                             autofocus: true,
-                          ),
+                            style: textLabelTextFielStyle,
+                            
+                          ),  
                           SizedBox(height: 20),
-                          Text("Sexe", textAlign: TextAlign.left),
+                          Text("Sexe", textAlign: TextAlign.left, 
+                            style: textLabelTextFielStyle,),
                           DropdownButtonFormField.new(
                             items: [],
                             onChanged: null,
+                            style: textLabelTextFielStyle,
+                            
                           ),
                           SizedBox(height: 20),
-                          Text("Salaire", textAlign: TextAlign.left),
+                          Text("Salaire", textAlign: TextAlign.left,
+                            style: textLabelTextFielStyle,),
                           TextField(),
                           SizedBox(height: 20),
-                          Text("Age", textAlign: TextAlign.left),
-                          RangeSlider(values: values, onChanged: null, labels: labels,),
+                          Text("Age", textAlign: TextAlign.left, 
+                            style: textLabelTextFielStyle,),
+                          RangeSlider(values: values, onChanged: null, labels: labels, ),
                           SizedBox(height: 20),
                           Text(
                             "Choisir un lieu de référence",
                             textAlign: TextAlign.left,
+
+                            style: textLabelTextFielStyle,
                           ),
                           DropdownButtonFormField.new(
                             items: [],
                             onChanged: null,
+
+                            style: textLabelTextFielStyle,
                           ),
                           SizedBox(height: 20),
                         ],
@@ -85,12 +100,14 @@ class AnnonceFiltre extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    ButtonPrimary()
                   ],
                 ),
               ),
             ))
           ],
-        ));
+        ),
+          floatingActionButton: ButtonPrimary(),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        );
   }
 }

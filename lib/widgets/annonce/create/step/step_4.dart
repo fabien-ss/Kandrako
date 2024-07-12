@@ -37,7 +37,7 @@ class Step4 extends StepInit {
                   widthFactor: 0.8,
                   child: Column(
                     children: [
-                      Text("Choisissez le lieu"),
+                      Text("Choisissez le lieu", style: textLabelTextFielStyle,),
                       TextField(
                         onChanged: (value) {
                           print(value);

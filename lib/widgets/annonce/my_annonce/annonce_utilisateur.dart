@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kandrako/appTheme/colors.dart';
 import 'package:kandrako/widgets/annonce/card/annonce_card.dart';
 import 'package:kandrako/widgets/annonce/my_annonce/annonce_utilisateur_card.dart';
+import 'package:kandrako/widgets/appBar/top_app_bar.dart';
 
 
 import '../../menu/menu_bottom.dart';
@@ -10,35 +11,17 @@ import '../../menu/menu_bottom.dart';
 class AnnonceUtilisateur extends StatelessWidget {
   const AnnonceUtilisateur({super.key});
 
+  void next(){} 
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: const Text("Mes annonces"), backgroundColor: Colors.white),
+        appBar: TopAppBar(onNextStep: next, titre: "Mes annonces", fontColor: Colors.black, iconColor: Colors.black).get(context),
         backgroundColor: const Color.fromARGB(255, 245, 245, 245),
         drawerScrimColor: blueColor,
         body: StepperExample(),
         bottomNavigationBar: const BottomMenu(),
-        /*floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: Container(
-          width: 64,
-          height: 64,
-          child: FloatingActionButton(
-            backgroundColor: Colors.white,
-            onPressed: null,
-            elevation: 0,
-            shape: RoundedRectangleBorder( 
-              side: const BorderSide(
-                width: 3, color: blueColor
-              ),
-              borderRadius: BorderRadius.circular(100), 
-             ),
-              child: const Icon(
-                Icons.add,
-                color: blueColor
-              ),
-            ), 
-        ),*/
       )
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kandrako/appTheme/colors.dart';
+import 'package:kandrako/widgets/annonce/liste/annonce_details.dart';
+import 'package:kandrako/widgets/annonce/my_annonce/annonce_utilisateur_details.dart';
 import 'package:kandrako/widgets/text/text_icon.dart';
 
 class AnnonceUtilisateurCard extends StatelessWidget {
@@ -8,7 +10,7 @@ class AnnonceUtilisateurCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.only(left: 30, bottom: 10),
+      margin: EdgeInsets.only(bottom: 10),
       elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0)
@@ -28,7 +30,7 @@ class AnnonceUtilisateurCard extends StatelessWidget {
             Row( 
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton(onPressed: null, child: const Text("Détails")),
+                TextButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (builder) => AnnonceUtilisateurDetails())), child: const Text("Détails")),
                 _buildInfoRow(Icons.calendar_month, "11-06-23 12-06-23")  
               ],
              )
